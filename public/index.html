@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+
+    <title>World Explorer</title>
+
+    <link
+        rel="icon"
+        href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🌍</text></svg>"
+    >
+
+    <link
+        rel="stylesheet"
+        href="css/styles.css"
+    >
+
+</head>
+
+<body>
+
+    <a class="skip-link" href="#panel-lateral">Saltar al buscador de países</a>
+
+    <header class="encabezado">
+
+        <h1>WORLD EXPLORER</h1>
+
+        <p>
+            Explora los países del mundo: datos, capitales e idiomas
+        </p>
+
+    </header>
+
+    <div id="error-banner" role="alert" hidden></div>
+
+    <main>
+
+        <section id="globe-container" aria-label="Globo terráqueo interactivo">
+
+            <div id="globeViz"></div>
+
+        </section>
+
+        <section id="panel-lateral" aria-label="Buscador y favoritos">
+
+            <div class="buscador">
+
+                <label for="buscar-pais">Buscar país</label>
+                <input
+                    type="search"
+                    id="buscar-pais"
+                    placeholder="Ej: Colombia, Japón..."
+                    autocomplete="off"
+                >
+
+                <label for="filtro-region">Filtrar por región</label>
+                <select id="filtro-region">
+                    <option value="">Todas las regiones</option>
+                </select>
+
+            </div>
+
+            <ul id="lista-resultados" aria-label="Resultados de la búsqueda"></ul>
+
+            <div class="favoritos">
+
+                <button
+                    type="button"
+                    id="toggle-favoritos"
+                    aria-expanded="true"
+                    aria-controls="lista-favoritos"
+                >
+                    ★ Favoritos (<span id="contador-favoritos">0</span>)
+                </button>
+
+                <ul id="lista-favoritos" aria-label="Países favoritos"></ul>
+
+            </div>
+
+        </section>
+
+        <aside id="info-panel" aria-live="polite">
+
+            <div id="flag"></div>
+
+            <h2 id="country-name">
+                Selecciona un país
+            </h2>
+
+            <button type="button" id="btn-favorito" aria-pressed="false" hidden></button>
+
+            <p>
+                <strong>Nombre oficial:</strong>
+                <span id="official-name"></span>
+            </p>
+
+            <p>
+                <strong>Capital:</strong>
+                <span id="capital"></span>
+            </p>
+
+            <p>
+                <strong>Población:</strong>
+                <span id="population"></span>
+            </p>
+
+            <p>
+                <strong>Región:</strong>
+                <span id="region"></span>
+            </p>
+
+            <p>
+                <strong>Idiomas:</strong>
+                <span id="languages"></span>
+            </p>
+
+            <p>
+                <strong>Moneda:</strong>
+                <span id="currency"></span>
+            </p>
+
+        </aside>
+
+    </main>
+
+    <!-- Biblioteca Globe.gl -->
+    <script src="https://cdn.jsdelivr.net/npm/globe.gl"></script>
+
+    <!-- JavaScript de la aplicación (módulos ES) -->
+    <script type="module" src="js/main.mjs"></script>
+
+</body>
+
+</html>
