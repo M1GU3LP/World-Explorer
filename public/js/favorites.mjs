@@ -1,4 +1,3 @@
-
 const CLAVE_ALMACENAMIENTO = "world-explorer:favoritos";
 
 function leerFavoritos() {
@@ -20,12 +19,10 @@ function leerFavoritos() {
         return [];
     }
 }
+
 function guardarFavoritos(lista) {
     try {
-        localStorage.setItem(
-            CLAVE_ALMACENAMIENTO,
-            JSON.stringify(lista)
-        );
+        localStorage.setItem(CLAVE_ALMACENAMIENTO, JSON.stringify(lista));
     } catch (error) {
         console.error("Error guardando favoritos en localStorage:", error);
     }

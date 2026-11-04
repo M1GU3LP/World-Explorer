@@ -1,18 +1,6 @@
-import {
-    cargarPaises,
-    obtenerPais
-} from "./countries.mjs";
-
-import {
-    inicializarGlobo,
-    resaltarPaisEnGlobo,
-    quitarResaltadoEnGlobo
-} from "./globe.mjs";
-
-import{
-    ErrorApi,validarFavoritosApi
-} from "./api.mjs";
-
+import { cargarPaises, cargarPais } from "./countries.mjs";
+import { ErrorApi, validarFavoritosApi } from "./api.mjs";
+import { inicializarGlobo, resaltarPaisEnGlobo, quitarResaltadoEnGlobo } from "./globe.mjs";
 import {
     mostrarInformacion,
     mostrarMensaje,
@@ -29,17 +17,8 @@ import {
     actualizarBotonTema,
     renderizarFavoritos
 } from "./ui.mjs";
-
-import {
-    inicializarBuscador
-} from "./search.mjs";
-
-import {
-    alternarFavorito,
-    obtenerFavoritos,
-    reemplazarFavoritos
-} from "./favorites.mjs";
-
+import { inicializarBuscador } from "./search.mjs";
+import { alternarFavorito, obtenerFavoritos, reemplazarFavoritos } from "./favorites.mjs";
 import {
     aplicarTema,
     obtenerTema,
