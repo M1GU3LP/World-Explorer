@@ -8,13 +8,13 @@ Explorador de países con un globo 3D interactivo. Permite buscar países por no
 
 | Pieza | URL |
 |---|---|
-| Aplicación publicada (frontend) | _pendiente: pega aquí la URL de Netlify/Vercel_ |
-| API publicada (backend) | _pendiente: pega aquí la URL de Render_ |
+| Aplicación publicada (frontend) | https://flourishing-flan-f83690.netlify.app/|
+| API publicada (backend) |https://world-explorer-gmqw.onrender.com|
 
 ## Cómo ejecutarlo en local
 
 ```bash
-git clone <URL-del-repositorio>
+git clone <https://github.com/M1GU3LP/World-Explorer >
 cd world-explorer
 npm install
 cp .env.example .env     
@@ -94,13 +94,10 @@ Optimizaciones aplicadas: **minificación** de JS y CSS (`npm run build` con esb
 Ejecútalo sobre la URL publicada (DevTools → pestaña Lighthouse → modo móvil) y pega aquí los resultados y tu análisis.
 
 | Categoría | Puntaje | Análisis / mejora aplicada |
-|---|---|---|
-| Rendimiento | _pendiente_ | |
-| Accesibilidad | _pendiente_ | |
-| Prácticas recomendadas | _pendiente_ | |
-| SEO | _pendiente_ | |
-
-> Puedes pegar el código del diagrama en <https://mermaid.live> para exportarlo como imagen y usarlo en la sustentación.
+| Rendimiento | 46 |Render bloquea peticiones, Problemas de navegador en el arbol de dependencias,JS poco usado, Problemas de propiedades geometricas en el DOM |
+| Accesibilidad | 100| Atributos aria-* corresponden a los roles , los botones tienen un nombre accesible, Imágenes tienen atributo alt, Colores de fondo y primer plano tienen contraste suficiente, listas <li> contienen sus correspondientes <ul> o <ol>. |
+| Prácticas recomendadas | 100 |Uso de https, permisos a los usuarios de pegar informacion en los campos input, imagenes con resolución apropiada, no contiene errores de navegador en la consola. no presenta errores en la seccion errores de Devtools|
+| SEO | 100 |Docuemnto contiene un titulo, cpmtiene una descripcion meta , cumple satisfactoriamente con el codigo de estado HTTP|
 
 ## Estructura
 
